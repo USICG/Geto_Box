@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>계산기 과제</title>
+<script language="javascript">
+var sss = document.getElementsByName("sss");
+function calc(form)
+{sss[0].value=eval(sss[0].value);}
+
+function write2(input, character){
+        
+  if(sss[0].value == null || sss[0].value == "0")
+          sss[0].setAttribute("value", character);
+        else
+          sss[0].value += character
+      }
+
+function clear2()
+ {
+  sss[0].value ="";
+ }
+ 
+</SCRIPT>
+</head>
+ 
+<body>
+<form>
+<table border="1" width="300" height="30">
+ <TR>
+  
+  <TD ALIGN=CENTER><input type="text" name="sss"  size= "39" readonly></TD>
+ 
+  
+ </TR>
+</table>
+<table border="1" width="300" height="30"> 
+ <TR>
+  <TD ALIGN=CENTER><input type = "button" name = "clear" value="Clear" onClick="clear2()"> </TD>
+  <TD ALIGN=CENTER><input type = "button" name = "equl" value="=" onClick="calc()"> </TD>
+ </TR>
+</table>
+<table border="1" width="300" height="100">
+ <TR>
+  <TD ALIGN=CENTER><input type = "button" name = "1" value="1" onClick="write2('', this.value)"> </TD>
+  <TD ALIGN=CENTER><input type = "button" name = "2" value="2" onClick="write2('', this.value)"> </TD>
+  <TD ALIGN=CENTER><input type = "button" name = "3" value="3" onClick="write2('', this.value)"> </TD>
+  <TD></TD>
+  <TD ALIGN=CENTER><input type = "button" name = "+" value="+" onClick="write2('', this.value)"> </TD>
+  <TD></TD>
+  <TD ALIGN=CENTER><input type = "button" name = "x^y" value="x^y"> </TD>
+ </TR>
+ <TR>
+  <TD ALIGN=CENTER><input type = "button" name = "4" value="4" onClick="write2('', this.value)"> </TD>
+  <TD ALIGN=CENTER><input type = "button" name = "5" value="5" onClick="write2('', this.value)"> </TD>
+  <TD ALIGN=CENTER><input type = "button" name = "6" value="6" onClick="write2('', this.value)"> </TD>
+  <TD></TD>
+  <TD ALIGN=CENTER><input type = "button" name = "-" value="-" onClick="write2('', this.value)"> </TD>
+  <TD></TD>
+  <TD ALIGN=CENTER><input type = "button" name = "sin" value="sin"> </TD>
+ </TR>
+ <TR>
+  <TD ALIGN=CENTER><input type = "button" name = "7" value="7" onClick="write2('', this.value)"> </TD>
+  <TD ALIGN=CENTER><input type = "button" name = "8" value="8" onClick="write2('', this.value)"> </TD>
+  <TD ALIGN=CENTER><input type = "button" name = "9" value="9" onClick="write2('', this.value)"> </TD>
+  <TD></TD>
+  <TD ALIGN=CENTER><input type = "button" name = "*" value="*" onClick="write2('', this.value)"> </TD>
+  <TD></TD>
+  <TD ALIGN=CENTER><input type = "button" name = "cos" value="cos"> </TD>
+ </TR>
+ <TR>
+  <TD ALIGN=CENTER><input type = "button" name = "0" value="0" onClick="write2('', this.value)"> </TD>
+  <TD ALIGN=CENTER><input type = "button" name = "x/-" value="x/-"> </TD>
+  <TD ALIGN=CENTER><input type = "button" name = "." value="."> </TD>
+  <TD></TD>
+  <TD ALIGN=CENTER><input type = "button" name = "/" value="/" onClick="write2('', this.value)"> </TD>
+  <TD></TD>
+  <TD ALIGN=CENTER><input type = "button" name = "tan" value="tan"> </TD>
+ </TR>
+</table>
+</form>
+<script language="javascript">
+</SCRIPT>
+</body>
+</html>
