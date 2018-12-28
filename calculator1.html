@@ -66,7 +66,6 @@ style="border-color:black" onClick="previouskey=event.srcElement.innerText">
   </center>
 
 <script language="JavaScript1.2">
-
 /*
 DHTML Calculator Script- 
 ¨Ï Dynamic Drive (www.dynamicdrive.com)
@@ -74,7 +73,6 @@ For full source code, installation instructions,
 100's more DHTML scripts, and Terms Of
 Use, visit dynamicdrive.com
 */
-
 var results=''
 var previouskey=''
 var re=/(\/|\*|\+|-)/
@@ -83,7 +81,6 @@ var re3=/.+(\/|\*|\+|-).+/
 var re4=/\d|\./
 var re5=/^[^\/\*\+].+\d$/
 var re6=/\./
-
 function calculate(){
 if (event.srcElement.tagName=="TD"){
 if (event.srcElement.innerText.match(re4)&&previouskey=="=")
@@ -98,15 +95,12 @@ if (results.toString().length>=12&&results.toString().match(re6))
 results=results.toString().substring(0,12)
 result.innerText=results
 }
-
 results+=event.srcElement.innerText
 if (results.match(re2))
 results=results.substring(0,results.length-2)+results.charAt(results.length-1)
-
 result.innerText=results
 }
 }
-
 function calculateresult(){
 if (!results.match(re5)){
 result.innerText="Error!"
@@ -117,14 +111,10 @@ if (results.toString().length>=12&&results.toString().match(re6))
 results=results.toString().substring(0,12)
 result.innerText=results
 }
-
-
-
 function pn(){
 if (result.innerText.charAt(0)!='-')
 result.innerText=results='-'+result.innerText
 else if (result.innerText.charAt(0)=='-')
 result.innerText=results=result.innerText*(-1)
 }
-
 </script>
