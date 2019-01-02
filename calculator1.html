@@ -60,6 +60,7 @@ style="border-color:black" onClick="previouskey=event.srcElement.innerText">
         </div></td>
       </tr>
     </table>
+	<table><tr><td width=30%>←</td><td width=30%>C</td></tr><td width=40%>=</td></tr></table>
     </td>
   </tr>
 </table>
@@ -116,5 +117,9 @@ if (result.innerText.charAt(0)!='-')
 result.innerText=results='-'+result.innerText
 else if (result.innerText.charAt(0)=='-')
 result.innerText=results=result.innerText*(-1)
+}
+  //3자리 단위마다 콤마 생성
+function addComma(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
 }
 </script>
