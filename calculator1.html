@@ -60,7 +60,17 @@ style="border-color:black" onClick="previouskey=event.srcElement.innerText">
         </div></td>
       </tr>
     </table>
-	<table><tr><td width=30%>←</td><td width=30%>C</td></tr><td width=40%>=</td></tr></table>
+	<table border="1" width="100%" cellspacing="0" cellpadding="0" height="175">
+	<tr>
+	<td width=30% style="cursor:hand;font:bold 32px Verdana;color:white;text-align:center"
+            onMouseover="event.srcElement.style.color='yellow'"
+            onMouseout="event.srcElement.style.color='white'" onClick="calculateresult()">←</td>
+	<td width=30% style="cursor:hand;font:bold 20px Verdana;color:white;text-align:center"
+            onClick="result.innerText=0;results=''">C</td>
+	<td width=40% style="cursor:hand;font:bold 32px Verdana;color:white;text-align:center"
+            onMouseover="event.srcElement.style.color='yellow'"
+            onMouseout="event.srcElement.style.color='white'" onClick="calculateresult()">=</td>
+	</tr></table>
     </td>
   </tr>
 </table>
@@ -82,6 +92,10 @@ var re3=/.+(\/|\*|\+|-).+/
 var re4=/\d|\./
 var re5=/^[^\/\*\+].+\d$/
 var re6=/\./
+//3자리 단위마다 콤마 생성
+function addComma(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+}
 function calculate(){
 if (event.srcElement.tagName=="TD"){
 if (event.srcElement.innerText.match(re4)&&previouskey=="=")
@@ -118,8 +132,5 @@ result.innerText=results='-'+result.innerText
 else if (result.innerText.charAt(0)=='-')
 result.innerText=results=result.innerText*(-1)
 }
-  //3자리 단위마다 콤마 생성
-function addComma(x) {
-    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
-}
+
 </script>
